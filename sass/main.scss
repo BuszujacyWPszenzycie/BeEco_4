@@ -1,0 +1,83 @@
+@use 'colors' as *;
+
+*,
+::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Mulish', sans-serif;
+	font-size: 1rem;
+}
+
+.hamburger {
+	z-index: 3;
+}
+
+.header {
+	&__mobile {
+		position: relative;
+		height: 100vh;
+		background-color: $white;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		&--title {
+			font-size: 4rem;
+			text-align: center;
+			text-transform: uppercase;
+			color: $dark-gray;
+			margin-bottom: 5rem;
+		}
+
+		&--icon {
+			font-size: 25rem;
+			color: $green;
+		}
+	}
+	&__icon {
+		padding: 1rem;
+		color: $green;
+
+		&--wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3rem;
+			z-index: 3;
+		}
+	}
+}
+
+.nav {
+	&__mobile {
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		top: 0;
+		opacity: 0;
+		z-index: 1;
+		background-color: $green;
+	}
+}
